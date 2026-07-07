@@ -134,15 +134,15 @@ main {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(20rem, 1.1fr);
+  grid-template-columns: 1fr;
   gap: clamp(1.5rem, 4vw, 4.5rem);
-  align-items: center;
-  min-height: calc(100vh - 4.5rem);
+  align-items: start;
+  min-height: auto;
   padding: clamp(2rem, 5vw, 5rem) clamp(1rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3rem);
 }
 
 .hero-copy {
-  max-width: 45rem;
+  max-width: 58rem;
 }
 
 .eyebrow {
@@ -268,6 +268,7 @@ h3 {
 .hero-media {
   position: relative;
   margin: 0;
+  max-width: 58rem;
   border: 1px solid rgba(103, 232, 249, 0.34);
   border-radius: 0.5rem;
   box-shadow: var(--shadow), 0 0 44px rgba(34, 211, 238, 0.14);
@@ -678,23 +679,23 @@ h3 {
   }
 }
 
-@media (max-width: 1300px) {
+@media (min-width: 1500px) {
   .hero {
-    grid-template-columns: 1fr;
-    align-items: start;
-    min-height: auto;
+    grid-template-columns: minmax(0, 0.92fr) minmax(20rem, 1.08fr);
+    align-items: center;
+    min-height: calc(100vh - 4.5rem);
   }
 
   .hero-copy {
-    max-width: 58rem;
+    max-width: 48rem;
   }
 
   .hero-text {
-    max-width: 54rem;
+    max-width: 44rem;
   }
 
   .hero-media {
-    max-width: 58rem;
+    max-width: none;
   }
 }
 
